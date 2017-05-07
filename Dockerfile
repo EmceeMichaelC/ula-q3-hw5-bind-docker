@@ -12,6 +12,6 @@ COPY ./named.conf /etc
 # Make port 53 available to the world outside this container
 EXPOSE 53
 
-# Start named in the foreground.
-ENTRYPOINT ["named", "-f", "-u", "named"]
+# Start named in the foreground with logging to stderr option.
+ENTRYPOINT ["named", "-g", "-u", "named"]
 
